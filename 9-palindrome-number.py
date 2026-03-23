@@ -13,4 +13,4 @@ class Solution:
 class Solution:
     def isPalindrome(self, x: int) -> bool:
         b = str(x)
-        return b = b[::-1]
+        return b == b[::-1]
