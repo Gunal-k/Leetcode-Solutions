@@ -7,4 +7,4 @@ class Solution:
             if haystack[i : i + n_len] == needle:
                 return i
             
-        return -1
+        return -158
