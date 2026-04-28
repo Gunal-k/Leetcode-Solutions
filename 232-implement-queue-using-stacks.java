@@ -11,8 +11,8 @@ class MyQueue {
     }
     
     public int pop() {
-        if(s2.empty()){
-            while(!s1.empty()){
+        if(s2.isEmpty()){
+            while(!s1.isEmpty()){
                 s2.push(s1.pop());
             }
         }
@@ -20,15 +20,15 @@ class MyQueue {
     }
     
     public int peek() {
-        if(s2.empty()){
-            while(!s1.empty()){
+        if(s2.isEmpty()){
+            while(!s1.isEmpty()){
                 s2.push(s1.pop());
             }
         }
         return s2.peek();
     }
     
-    public boolean empty() {
+    public boolean isEmpty() {
         return s2.isEmpty() && s1.isEmpty();
     }
 }
@@ -39,5 +39,5 @@ class MyQueue {
  * obj.push(x);
  * int param_2 = obj.pop();
  * int param_3 = obj.peek();
- * boolean param_4 = obj.empty();
+ * boolean param_4 = obj.isEmpty();
  */
