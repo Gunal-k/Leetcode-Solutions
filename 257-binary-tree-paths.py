@@ -1,19 +1,28 @@
 class Solution:
-    def binaryTreePaths(self, root):
-        res = []
-
-        def dfs(node, path):
-            if not node:
+    def binaryTreePaths(self, root: Optional[TreeNode]) -> List[str]:
+        ans = []
+        def dfs(root,arr):
+            if not root:
                 return
+            arr = arr + str(root.val)
+            if not root.right and not root.left:
+                ans.append(arr)
+            else:
+                dfs(root.left,arr + "->")
+                dfs(root.right,arr + "->")
+        dfs(root,"")
+        return ans
+    
+        # def dfs(node, path):
+        #     if not node:
+        #         return
             
-            # If it's a leaf node
-            if not node.left and not node.right:
-                res.append(path + str(node.val))
-                return
+        #     path.append(str(node.val))
             
-            # Continue DFS
-            dfs(node.left, path + str(node.val) + "->")
-            dfs(node.right, path + str(node.val) + "->")
-
-        dfs(root, "")
-        return res
+        #     if not node.left and not node.right:
+        #         ans.append("->".join(path))
+        #     else:
+        #         dfs(node.left, path)
+        #         dfs(node.right, path)
+            
+        #     path.pop()
