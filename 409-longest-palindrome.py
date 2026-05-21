@@ -7,11 +7,9 @@ class Solution:
         ans = 0
         odd = False
         for num in freq.values():
-                if num % 2 == 0:
-                    ans += num
-                else:
-                    ans += num - 1
-                    odd = True
+            if num % 2 == 1:
+                odd = True
+            ans += num - (num % 2)
                  
         return ans + 1 if odd else ans
 
