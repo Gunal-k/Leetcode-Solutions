@@ -47,7 +47,7 @@ I'm adding solutions progressively while following a consistent problem-solving 
 
 | Metric | Progress |
 |---|---|
-| Problems Solved | 270+ |
+| Problems Solved | 300+ |
 | Primary Language | Python |
 | Secondary Language | Java |
 | Goal | Strong DSA & Interview Preparation |
